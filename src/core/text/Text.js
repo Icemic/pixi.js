@@ -705,8 +705,7 @@ export default class Text extends Sprite
      */
     set text(text)
     {
-        text = text || ' ';
-        text = text.toString();
+        text = String(text || ' ');
 
         if (this._text === text)
         {

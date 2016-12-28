@@ -607,7 +607,7 @@ export default class Text extends Sprite
     {
         this.updateText(true);
 
-        return Math.abs(this.scale.x) * this.texture.orig.width;
+        return Math.abs(this.scale.x) * this._texture.orig.width;
     }
 
     /**
@@ -621,7 +621,7 @@ export default class Text extends Sprite
 
         const s = sign(this.scale.x) || 1;
 
-        this.scale.x = s * value / this.texture.orig.width;
+        this.scale.x = s * value / this._texture.orig.width;
         this._width = value;
     }
 
@@ -649,7 +649,7 @@ export default class Text extends Sprite
 
         const s = sign(this.scale.y) || 1;
 
-        this.scale.y = s * value / this.texture.orig.height;
+        this.scale.y = s * value / this._texture.orig.height;
         this._height = value;
     }
 
